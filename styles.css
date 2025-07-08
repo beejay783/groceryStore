@@ -6,12 +6,23 @@
 }
 
 header{
-    height: 100vh;
+    height: 85vh;
     background-color: #f6f6f6;
+    padding-top: 6rem;
 }
 
 nav{
     padding-block: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    background-color: #f6f6f6;
+}
+
+.hamburger,
+#toggle{
+    display: none;
 }
 
 .genLayout{
@@ -31,11 +42,14 @@ nav{
     align-items: center;
 }
 
+.logo > span > i{
+    font-size: 2rem;
+    color: #fb9006;
+}
+
 .logoText{
     text-align: right;
 }
-
-
 
 .logoText > h2{
     text-transform: capitalize;
@@ -188,7 +202,7 @@ nav{
 }
 
 .ratingText > h5{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .bannerImg{
@@ -202,4 +216,524 @@ nav{
     border-radius: 100%;
     width: 100%;
     height: 100%;
+}
+
+/* styling for secOne */
+
+.secOne{
+    padding-block: 3rem;
+}
+
+.offerWrapper{
+    background-color: #dcece9;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offerContent{
+    width: 50%;
+}
+
+.offerContent > h5{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.offerContent >h1{
+    font-size: 2.5rem;
+    margin-block: 1rem;
+    text-transform: capitalize;
+
+}
+.offerContent >h1 >span, 
+.featuredProducts > h3 > span{
+    color: #178255;
+}
+
+.offerContent > p{
+    font-size: .7rem;
+    opacity: .4;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.offerImg{
+    width: 40%;
+    height: 40vh;
+}
+
+.offerImg > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* styling for secTwo */
+.secTwo, .secFive{
+    background-color: #f6f6f6;
+    padding-block: 3rem;
+}
+
+.featuredProducts > h3,
+.bestSellingProducts > h3{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.featuredProducts > a,
+.bestSellingProducts > a{
+    color: #000;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: right;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.productCardWrapper{
+    margin-block: 1rem;
+    display: grid;
+    gap: 15px;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.productCard {
+    border-radius: 20px;
+}
+
+.imgCont{
+    background-color: #dcece9;
+    height: 30vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    position: relative;
+}
+
+.imgCont > img{
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imgCont > span{
+    border: 2px solid #178255;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    color: #178255;
+    font-size: 22px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.cardContent{
+    padding: 0.8rem .8rem 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: #fff;
+}
+
+.tabs,
+.priceTags{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tabs > h6{
+    font-size: 0.8rem;
+    color: #178255;
+    text-transform: capitalize;
+}
+
+.cardContent > h1{
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.cardContent > span{
+    font-size: small;
+    opacity: 0.4;
+    font-weight: 500;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.price > h5{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.price > span{
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: line-through;
+    opacity: .4;
+    margin-block: 0.7rem;
+}
+
+.cardBtn{
+    background-color: #dcece9;
+    border: none;
+    color: #178255;
+    padding: 0.2rem 0.2rem;
+    border-radius: 7px;
+}
+
+/* section three */
+.secThree{
+    padding-block: 3rem;
+}
+
+.summerDeals{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem;
+}
+
+.imgBg{
+    background-image: url(./image/eating-healthy-portrait.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    height: 55vh;
+    border-radius: 15px;
+    padding: 1rem;
+}
+
+.emptyImg{
+    border: 2px solid #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.imgBg2{
+    background-image: url(./image/mid-shot-woman-holding-basket-with-groceries_23-2148523387.avif);
+}
+
+.summerBoard{
+    background-color: #f6f6f6;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.summerBoardContent > h1{
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.8rem;
+}
+
+.summerBoardContent > h1 > span{
+    color: #178255;
+}
+
+.summerBoardContent > h5{
+    text-transform: capitalize;
+    text-align: center;
+    margin-top: 0.7rem;
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 0.7;
+}
+
+.countDown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-block: 2rem;
+}
+
+.timeCount > span{
+    font-weight: 600;
+    border-radius: 5px;
+    box-shadow: 0.1rem 0.1rem 10px #efefef;
+    width: 60px;
+    height: 50px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.timeCount > h6{
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 4px;
+}
+
+.countBtn{
+    width: 145px;
+    margin: auto;
+}
+
+/* responsive code */
+@media(min-width: 260px) and (max-width: 460px) {
+    .navRight{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+        margin-right: 1rem;
+        font-size: 1.6rem;
+        color: green;
+        font-weight: 800;
+    }
+
+    .navRight{
+        display: none;
+        position: absolute;
+        width: 85%;
+        padding: 1.4rem 1rem;
+        top: 3.5rem;
+        right: 3px;
+        z-index: 1;
+        background-color: #0a0701;
+        opacity: 0.8;
+        border-bottom: 4px solid white;
+        transform: translate(100% 0);
+        transition: transform 0.5s cubic-bezier(0.77 0.2 0.05 1);
+    }
+
+    .navItems{
+        flex-direction: column;
+    }
+
+    .navItems > a{
+        color: white;
+        padding-bottom: 5px;
+        border-bottom: 2px solid white;
+    }
+
+    .navIcons{
+        padding: 0;
+        border-left: none;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .navIcons > span {
+        font-size: 1rem;
+        color: white;
+    }
+
+      #toggle:checked + .navRight{
+        display: block;
+        transform: none;
+      }
+
+    .banner{
+        width: calc(100% - 40px);
+        flex-direction: column;
+    }
+
+    .bannerContent{
+        width: 100%;
+    }
+
+    .bannerContent > h1{
+        font-size: 2rem;
+    }
+
+    .bannerImg{
+        width: 90%;
+    }
+
+    .offerWrapper{
+        flex-direction: column;
+        width: 300px;
+        gap: 2rem;
+    }
+
+    .offerContent, .offerImg{
+        width: 100%;
+    }
+
+    .productCardWrapper{
+        width: 360px;
+        margin: 1rem auto;
+        grid-template-columns: 1fr;
+    }
+
+    .summerDeals{
+        width: 360px;
+        grid-template-columns: 1fr;
+    }
+
+    .summerBoard{
+        padding-block: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* section four  */
+.dealOfTheDay{
+    padding-block: 1.5rem;
+}
+
+.dealOfTheDayCont{
+    text-align: center;
+}
+
+.dealOfTheDayCont > h3{
+    text-transform: capitalize;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.dealOfTheDayCont > p{
+    margin-inline: 11.8rem;
+    font-size: 13.5px;
+    padding-right: 35px;
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.dealCardWrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.dealCard{
+    border: 2px solid #999494;
+    width: 44%;
+    height: 46vh;
+    display: flex;
+    border-radius: 10px;
+}
+
+.dealImgCont{
+    width: 30rem;
+    background-color: #f6f6f6;
+    margin: 7px;
+    margin-right: 3rem;
+    border-radius: 12px;
+    position: relative;
+    
+}
+.dealImgCont > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.spanOne{
+    padding: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    background-color: #178255;
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
+}
+
+.spanTwo{
+    border: 2px solid #178255;
+    border-radius: 100%;
+    padding: 3px 5px;
+    color: #178255;
+    font-size: 20px;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.dealCardTabs > h4{
+    font-weight: 500;
+    font-size: 18px;
+    color: #178255;
+    padding-top: 1.3rem;
+}
+
+.dealCardTabs > h3{
+    font-weight: 600;
+    font-size: 21px;
+    padding-block: .8rem;
+}
+
+.dealPrice{
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+.dealPrice > h5{
+    font-weight: 500;
+    font-size: 16px;
+    padding-top: 15px;
+}
+
+.dealPrice > span{
+    text-decoration: line-through;
+    opacity: .5;
+    font-size: small;
+}
+
+.dealPriceTags > h5{
+    padding-block: 25px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.dealPriceTags > p{
+    font-size: 14px;
+    font-weight: 500;
+    padding-bottom: 15px;
+}
+
+.priceBtn{
+    color: #178255;
+    border: none;
+    padding: 3px;
+    border-radius: 8px;
+    background-color: #dff1ea;
+    font-weight: 500;
+}
+
+.imgCont > p{
+    padding: 6px 10px;
+    display: inline;
+    border-radius: 12px;
+    padding-right: 0;
+    color: white;
+    background-color: #178255;
+    font-size: 12px;
+    position: absolute;
+    left: 1rem;
+    top: 1.5rem;
+
+    
 }
